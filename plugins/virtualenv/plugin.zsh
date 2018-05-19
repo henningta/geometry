@@ -18,7 +18,7 @@ geometry_prompt_virtualenv_render() {
     # Add virtualenv name if active
     if [ -n "${VIRTUAL_ENV}" ]; then
         local virtualenv_ref=$(basename $VIRTUAL_ENV)
-        environment_str="$(prompt_geometry_colorize $GEOMETRY_COLOR_VIRTUALENV ${virtualenv_ref})"
+        environment_str="$(prompt_geometry_colorize $GEOMETRY_COLOR_VIRTUALENV \(${virtualenv_ref}\))"
     fi
 
     # Add separator if both active
